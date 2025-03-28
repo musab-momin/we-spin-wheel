@@ -15,7 +15,44 @@ document.addEventListener("DOMContentLoaded", function () {
         const centerY = canvas.height / 2;
         const radius = canvas.width / 2;
 
-        const activeSlices = JSON.parse(canvas.getAttribute("data-slices"));
+        const activeSlices = [
+            {
+                id: 1,
+                text: "10% Off",
+                bgColor: "#0f8af9",
+                probability: 100
+            },
+            {
+                id: 2,
+                text: "40% Off",
+                bgColor: "#41a4fa",
+                probability: 0
+            },
+            {
+                id: 3,
+                text: "No luck :(",
+                bgColor: "#73bcfb",
+                probability: 0
+            },
+            {
+                id: 4,
+                text: "20% Off",
+                bgColor: "#0571d0",
+                probability: 100
+            },
+            {
+                id: 5,
+                text: "80% Off",
+                bgColor: "#0f8af9",
+                probability: 100
+            },
+            {
+                id: 6,
+                text: "No luck :(",
+                bgColor: "#8dc2f0",
+                probability: 100
+            }
+        ];
         const angle = (2 * Math.PI) / activeSlices.length;
 
         activeSlices.forEach((slice, i) => {
